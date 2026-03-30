@@ -137,26 +137,26 @@ class YouTubeDownloader:
             opts['subtitleslangs'] = [language]
         return opts
 
-    def _tag_music_files(self, directory: Path) -> None:
+    def _tag_music_files(self, new_files: list) -> None:
         print("Tagging music files...")
-        for filename in sorted(f for f in os.listdir(directory) if f.endswith(".mp3")):
-            match = re.match(r"(\d+)\s*-\s*", filename)
-            if match:
-                try:
-                    audio = EasyID3(directory / filename)
-                    audio["tracknumber"] = match.group(1).lstrip("0") or "0"
-                    audio.save()
-                except Exception as e:
-                    print(f"Failed to tag {filename}: {e}")
+        for file_path in new_files:
+            if file_path.suffix.lower() == ".mp3":
+                match = re.match(r"(\d+)\s*-\s*", file_path.name)
+                if match:
+                    try:
+                        audio = EasyID3(file_path)
+                        audio["tracknumber"] = match.group(1).lstrip("0") or "0"
+                        audio.save()
+                    except Exception as e:
+                        print(f"Failed to tag {file_path.name}: {e}")
 
-    def _convert_srt_to_txt(self, directory: Path) -> None:
+    def _convert_srt_to_txt(self, new_files: list) -> None:
         print("Converting SRT to TXT...")
-        for filename in os.listdir(directory):
-            if filename.endswith(".srt"):
+        for file_path in new_files:
+            if file_path.suffix.lower() == ".srt":
                 try:
-                    srt_path = directory / filename
-                    txt_path = srt_path.with_suffix(".txt")
-                    with open(srt_path, 'r', encoding='utf-8') as f: content = f.read()
+                    txt_path = file_path.with_suffix(".txt")
+                    with open(file_path, 'r', encoding='utf-8') as f: content = f.read()
                     raw_lines = re.findall(r'^(?!\d+:\d+:\d+,\d+ --> \d+:\d+:\d+,\d+$)(?!\d+$).+', content, re.MULTILINE)
                     clean_lines = []
                     last_line = ""
@@ -167,11 +167,10 @@ class YouTubeDownloader:
                             last_line = cleaned
                     with open(txt_path, "w", encoding="utf-8") as f: f.write("\n".join(clean_lines))
                 except Exception as e:
-                    print(f"Error converting {filename}: {e}")
+                    print(f"Error converting {file_path.name}: {e}")
 
-    def _cleanup_files(self, directory: Path, keep_srt: bool) -> None:
-        for filename in os.listdir(directory):
-            file_path = directory / filename
+    def _cleanup_files(self, new_files: list, keep_srt: bool) -> None:
+        for file_path in new_files:
             ext = file_path.suffix.lower()
             if not keep_srt and ext == ".srt":
                 try: os.remove(file_path) 
@@ -217,6 +216,9 @@ class YouTubeDownloader:
                 trim_opts["force_keyframes_at_cuts"] = True
             
             browser_to_use = None
+
+            # Mark existing files to sandbox cleanup routines
+            existing_files = set(f.name for f in final_save_dir.iterdir() if f.is_file())
 
             # Common Options based on USER'S WORKING SCRIPT
             base_opts = {
@@ -306,12 +308,14 @@ class YouTubeDownloader:
                     ydl.download([url])
 
             # 4. Post-processing
+            new_files = [f for f in final_save_dir.iterdir() if f.is_file() and f.name not in existing_files]
+
             if dl_audio and is_playlist:
-                self._tag_music_files(final_save_dir)
+                self._tag_music_files(new_files)
             if dl_txt:
-                self._convert_srt_to_txt(final_save_dir)
+                self._convert_srt_to_txt(new_files)
             
-            self._cleanup_files(final_save_dir, dl_srt)
+            self._cleanup_files(new_files, dl_srt)
             self._report_progress(percentage=100, status="Download complete! ✅", is_complete=True)
 
         except Exception as e:
