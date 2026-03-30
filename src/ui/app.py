@@ -30,8 +30,8 @@ class ModernYouTubeDownloader(ctk.CTk):
         
         # Window setup
         self.title("YouTube Downloader")
-        self.geometry("680x780")
-        self.minsize(600, 700)
+        self.geometry("480x520")
+        self.minsize(480, 520)
         
         # Custom colors
         self.configure(fg_color=COLORS["bg_primary"])
@@ -86,9 +86,16 @@ class ModernYouTubeDownloader(ctk.CTk):
     
     def _build_ui(self):
         """Build the main UI"""
-        # Main container with padding
-        self.main_container = ctk.CTkFrame(self, fg_color="transparent")
-        self.main_container.pack(fill="both", expand=True, padx=SPACING["lg"], pady=SPACING["lg"])
+        # Main container (no longer scrollable, forces compactness)
+        self.scroll_frame = ctk.CTkFrame(
+            self, 
+            fg_color="transparent"
+        )
+        self.scroll_frame.pack(fill="both", expand=True, padx=SPACING["sm"], pady=SPACING["sm"])
+        
+        # Main container with padding (now inside scroll_frame)
+        self.main_container = ctk.CTkFrame(self.scroll_frame, fg_color="transparent")
+        self.main_container.pack(fill="both", expand=True, padx=SPACING["sm"])
         
         # Header
         self._build_header()
@@ -125,20 +132,20 @@ class ModernYouTubeDownloader(ctk.CTk):
     def _build_header(self):
         """Build the header with title and icon"""
         header_frame = ctk.CTkFrame(self.main_container, fg_color="transparent")
-        header_frame.pack(fill="x", pady=(0, SPACING["lg"]))
+        header_frame.pack(fill="x", pady=(0, SPACING["md"]))
         
         # Icon (YouTube-style play button)
         icon_canvas = ctk.CTkCanvas(
             header_frame, 
-            width=50, height=50, 
+            width=30, height=30, 
             bg=COLORS["bg_primary"],
             highlightthickness=0
         )
-        icon_canvas.pack(side="left", padx=(0, SPACING["md"]))
+        icon_canvas.pack(side="left", padx=(0, SPACING["sm"]))
         
         # Draw play button icon
-        icon_canvas.create_oval(5, 5, 45, 45, fill=COLORS["accent_primary"], outline="")
-        icon_canvas.create_polygon(20, 15, 20, 35, 38, 25, fill="white")
+        icon_canvas.create_oval(2, 2, 28, 28, fill=COLORS["accent_primary"], outline="")
+        icon_canvas.create_polygon(12, 8, 12, 22, 22, 15, fill="white")
         
         # Title and subtitle
         title_frame = ctk.CTkFrame(header_frame, fg_color="transparent")
@@ -147,15 +154,15 @@ class ModernYouTubeDownloader(ctk.CTk):
         title_label = ctk.CTkLabel(
             title_frame,
             text="YouTube Downloader",
-            font=ctk.CTkFont(family="Helvetica Neue", size=26, weight="bold"),
+            font=ctk.CTkFont(family="Helvetica Neue", size=20, weight="bold"),
             text_color=COLORS["text_primary"]
         )
         title_label.pack(anchor="w")
         
         subtitle_label = ctk.CTkLabel(
             title_frame,
-            text="Download videos, audio, and subtitles with ease",
-            font=ctk.CTkFont(family="Helvetica Neue", size=13),
+            text="Clean, modern downloader",
+            font=ctk.CTkFont(family="Helvetica Neue", size=12),
             text_color=COLORS["text_secondary"]
         )
         subtitle_label.pack(anchor="w")
@@ -172,8 +179,8 @@ class ModernYouTubeDownloader(ctk.CTk):
             url_container,
             textvariable=self.url_var,
             placeholder_text="https://youtube.com/watch?v=...",
-            height=48,
-            font=ctk.CTkFont(size=14),
+            height=32,
+            font=ctk.CTkFont(size=12),
             fg_color=COLORS["bg_tertiary"],
             border_color=COLORS["border"],
             corner_radius=RADIUS["md"]
@@ -183,9 +190,9 @@ class ModernYouTubeDownloader(ctk.CTk):
         paste_btn = ctk.CTkButton(
             url_container,
             text="📋",
-            width=48,
-            height=48,
-            font=ctk.CTkFont(size=18),
+            width=32,
+            height=32,
+            font=ctk.CTkFont(size=13),
             fg_color=COLORS["bg_tertiary"],
             hover_color=COLORS["bg_hover"],
             corner_radius=RADIUS["md"],
@@ -276,10 +283,10 @@ class ModernYouTubeDownloader(ctk.CTk):
             inner,
             text="",
             variable=variable,
-            width=24,
-            height=24,
-            checkbox_width=24,
-            checkbox_height=24,
+            width=20,
+            height=20,
+            checkbox_width=20,
+            checkbox_height=20,
             corner_radius=6,
             fg_color=COLORS["accent_primary"],
             hover_color=COLORS["accent_secondary"],
@@ -342,8 +349,8 @@ class ModernYouTubeDownloader(ctk.CTk):
             inner,
             text="",
             variable=self.playlist_var,
-            width=48,
-            height=24,
+            width=40,
+            height=20,
             fg_color=COLORS["bg_tertiary"],
             progress_color=COLORS["accent_primary"],
             button_color=COLORS["text_primary"],
@@ -361,8 +368,8 @@ class ModernYouTubeDownloader(ctk.CTk):
         self.save_entry = ctk.CTkEntry(
             path_container,
             textvariable=self.save_path_var,
-            height=44,
-            font=ctk.CTkFont(size=13),
+            height=32,
+            font=ctk.CTkFont(size=12),
             fg_color=COLORS["bg_tertiary"],
             border_color=COLORS["border"],
             corner_radius=RADIUS["md"]
@@ -372,9 +379,9 @@ class ModernYouTubeDownloader(ctk.CTk):
         browse_btn = ctk.CTkButton(
             path_container,
             text="Browse",
-            width=90,
-            height=44,
-            font=ctk.CTkFont(size=13, weight="bold"),
+            width=80,
+            height=32,
+            font=ctk.CTkFont(size=12, weight="bold"),
             fg_color=COLORS["bg_tertiary"],
             hover_color=COLORS["bg_hover"],
             corner_radius=RADIUS["md"],
@@ -413,9 +420,9 @@ class ModernYouTubeDownloader(ctk.CTk):
             inner,
             variable=self.lang_var,
             values=languages,
-            width=140,
-            height=36,
-            font=ctk.CTkFont(size=13),
+            width=120,
+            height=28,
+            font=ctk.CTkFont(size=12),
             fg_color=COLORS["bg_tertiary"],
             button_color=COLORS["bg_hover"],
             button_hover_color=COLORS["accent_primary"],
@@ -464,8 +471,8 @@ class ModernYouTubeDownloader(ctk.CTk):
             start_frame,
             textvariable=self.trim_start_var,
             placeholder_text="00:00:00",
-            height=40,
-            font=ctk.CTkFont(size=13, family="Menlo"),
+            height=32,
+            font=ctk.CTkFont(size=12, family="Menlo"),
             fg_color=COLORS["bg_tertiary"],
             border_color=COLORS["border"],
             corner_radius=RADIUS["sm"]
@@ -488,8 +495,8 @@ class ModernYouTubeDownloader(ctk.CTk):
             end_frame,
             textvariable=self.trim_end_var,
             placeholder_text="00:00:00",
-            height=40,
-            font=ctk.CTkFont(size=13, family="Menlo"),
+            height=32,
+            font=ctk.CTkFont(size=12, family="Menlo"),
             fg_color=COLORS["bg_tertiary"],
             border_color=COLORS["border"],
             corner_radius=RADIUS["sm"]
@@ -508,14 +515,14 @@ class ModernYouTubeDownloader(ctk.CTk):
     def _build_action_section(self):
         """Build download button and progress section"""
         action_frame = ctk.CTkFrame(self.main_container, fg_color="transparent")
-        action_frame.pack(fill="x", pady=(SPACING["lg"], 0), side="bottom")
+        action_frame.pack(fill="x", pady=(SPACING["md"], SPACING["lg"]))
         
         # Download button with gradient effect
         self.download_btn = ctk.CTkButton(
             action_frame,
             text="⬇️  Download",
-            height=56,
-            font=ctk.CTkFont(size=18, weight="bold"),
+            height=42,
+            font=ctk.CTkFont(size=16, weight="bold"),
             fg_color=COLORS["accent_primary"],
             hover_color=COLORS["accent_secondary"],
             corner_radius=RADIUS["lg"],
@@ -548,7 +555,7 @@ class ModernYouTubeDownloader(ctk.CTk):
     def _create_section(self, title: str, subtitle: str = ""):
         """Create a section with title and optional subtitle"""
         frame = ctk.CTkFrame(self.main_container, fg_color="transparent")
-        frame.pack(fill="x", pady=(SPACING["md"], 0))
+        frame.pack(fill="x", pady=(SPACING["sm"], 0))
         
         title_label = ctk.CTkLabel(
             frame,

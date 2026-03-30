@@ -40,44 +40,44 @@ COLORS = {
 
 # Typography
 FONTS = {
-    "heading_large": ("SF Pro Display", 24, "bold"),
-    "heading_medium": ("SF Pro Display", 18, "bold"),
-    "heading_small": ("SF Pro Display", 14, "bold"),
-    "body": ("SF Pro Text", 13),
-    "body_medium": ("SF Pro Text", 13, "normal"),
-    "body_small": ("SF Pro Text", 11),
-    "button": ("SF Pro Text", 13, "bold"),
-    "mono": ("SF Mono", 12),
+    "heading_large": ("SF Pro Display", 20, "bold"),
+    "heading_medium": ("SF Pro Display", 16, "bold"),
+    "heading_small": ("SF Pro Display", 13, "bold"),
+    "body": ("SF Pro Text", 12),
+    "body_medium": ("SF Pro Text", 12, "normal"),
+    "body_small": ("SF Pro Text", 10),
+    "button": ("SF Pro Text", 12, "bold"),
+    "mono": ("SF Mono", 11),
 }
 
 # Fallback fonts for systems without SF Pro
 FONTS_FALLBACK = {
-    "heading_large": ("Helvetica Neue", 24, "bold"),
-    "heading_medium": ("Helvetica Neue", 18, "bold"),
-    "heading_small": ("Helvetica Neue", 14, "bold"),
-    "body": ("Helvetica Neue", 13),
-    "body_medium": ("Helvetica Neue", 13, "normal"),
-    "body_small": ("Helvetica Neue", 11),
-    "button": ("Helvetica Neue", 13, "bold"),
-    "mono": ("Menlo", 12),
+    "heading_large": ("Helvetica Neue", 20, "bold"),
+    "heading_medium": ("Helvetica Neue", 16, "bold"),
+    "heading_small": ("Helvetica Neue", 13, "bold"),
+    "body": ("Helvetica Neue", 12),
+    "body_medium": ("Helvetica Neue", 12, "normal"),
+    "body_small": ("Helvetica Neue", 10),
+    "button": ("Helvetica Neue", 12, "bold"),
+    "mono": ("Menlo", 11),
 }
 
 # Spacing
 SPACING = {
-    "xs": 4,
-    "sm": 8,
-    "md": 16,
-    "lg": 24,
-    "xl": 32,
-    "xxl": 48,
+    "xs": 2,
+    "sm": 4,
+    "md": 6,
+    "lg": 8,
+    "xl": 12,
+    "xxl": 16,
 }
 
 # Border radius
 RADIUS = {
-    "sm": 6,
-    "md": 10,
-    "lg": 14,
-    "xl": 20,
+    "sm": 4,
+    "md": 6,
+    "lg": 10,
+    "xl": 16,
     "full": 9999,
 }
 

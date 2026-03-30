@@ -47,6 +47,27 @@ class YouTubeDownloader:
     
     def __init__(self, progress_callback: Optional[Callable[[DownloadProgress], None]] = None):
         self.progress_callback = progress_callback or (lambda x: None)
+        self.log_file = Path("yt_dlp_debug.log")
+        # Ensure log file is fresh
+        with open(self.log_file, "w", encoding="utf-8") as f:
+            f.write(f"YouTube Downloader Log Started. yt-dlp version: {yt_dlp.version.__version__}\n")
+
+    class Logger:
+        def __init__(self, log_file):
+            self.log_file = log_file
+        def debug(self, msg):
+            with open(self.log_file, "a", encoding="utf-8") as f:
+                f.write(f"DEBUG: {msg}\n")
+        def info(self, msg):
+            with open(self.log_file, "a", encoding="utf-8") as f:
+                f.write(f"INFO: {msg}\n")
+        def warning(self, msg):
+            with open(self.log_file, "a", encoding="utf-8") as f:
+                f.write(f"WARNING: {msg}\n")
+        def error(self, msg):
+            with open(self.log_file, "a", encoding="utf-8") as f:
+                f.write(f"ERROR: {msg}\n")
+
     
     def _report_progress(self, percentage: float = 0, status: str = "", 
                          is_complete: bool = False, is_error: bool = False,
@@ -57,8 +78,10 @@ class YouTubeDownloader:
     def _progress_hook(self, d):
         if d['status'] == 'downloading':
             try:
-                p = d.get('_percent_str', '0%').replace('%', '')
-                self._report_progress(percentage=float(p), status=f"Downloading... {d.get('_percent_str', '')}")
+                # Strip ANSI escape sequences yt-dlp outputs
+                raw_str = d.get('_percent_str', '0%')
+                clean_str = re.sub(r'\x1b[^m]*m', '', raw_str).replace('%', '')
+                self._report_progress(percentage=float(clean_str), status=f"Downloading... {raw_str}")
             except:
                 pass
         elif d['status'] == 'finished':
@@ -68,11 +91,24 @@ class YouTubeDownloader:
         opts = {
             'extract_flat': True,
             'playlist_items': '1',
-            'cookiesfrombrowser': ('chrome',),
-            'extractor_args': {'youtube': {'player_client': ['android']}},
+            'extractor_args': {'youtube': {'player_client': ['web', 'mweb', 'android']}},
             'quiet': True,
             'ignoreerrors': True
         }
+        
+        # Try to find a browser for cookies, but don't fail if all missing
+        for browser in ['chrome', 'safari', 'firefox']:
+            try:
+                test_opts = opts.copy()
+                test_opts['cookiesfrombrowser'] = (browser,)
+                with yt_dlp.YoutubeDL(test_opts) as ydl:
+                    info = ydl.extract_info(url, download=False)
+                    if info: 
+                         opts['cookiesfrombrowser'] = (browser,)
+                         break
+            except Exception:
+                continue
+
         with yt_dlp.YoutubeDL(opts) as ydl:
             try:
                 info = ydl.extract_info(url, download=False)
@@ -163,22 +199,41 @@ class YouTubeDownloader:
             
             final_save_dir.mkdir(parents=True, exist_ok=True)
             
+            trim_opts = {}
+            if not is_playlist and (trim_start.strip() or trim_end.strip()):
+                norm_start = TimeParser.normalize(trim_start)
+                start_sec = TimeParser.to_seconds(norm_start) if norm_start else 0
+                norm_end = TimeParser.normalize(trim_end)
+                end_sec = TimeParser.to_seconds(norm_end) if norm_end else float('inf')
+                
+                if start_sec >= end_sec and end_sec != float('inf'):
+                    raise ValueError("Start time must be earlier than end time.")
+                    
+                def download_range_func(info_dict, ydl):
+                    return [{'start_time': start_sec, 'end_time': end_sec}]
+                    
+                trim_opts["download_ranges"] = download_range_func
+                trim_opts["force_keyframes_at_cuts"] = True
+            
+            browser_to_use = None
+
             # Common Options based on USER'S WORKING SCRIPT
             base_opts = {
                 "paths": {"home": str(final_save_dir)},
                 "outtmpl": "%(playlist_index)s - %(title)s.%(ext)s" if is_playlist else "%(title)s.%(ext)s",
-                "cookiesfrombrowser": ("chrome",),
-                "quiet": True,
-                "extractor_args": {
-                    "youtube": {
-                        "player_client": ["android"]
-                    }
-                },
+                "quiet": False, # Setting to False to see more in log
+                "color": "no_color",
+                "logger": self.Logger(self.log_file),
                 "progress_hooks": [self._progress_hook],
-                "ignoreerrors": True,
+                "ignoreerrors": False,
                 "nocheckcertificate": True,
                 "noplaylist": not download_playlist,
+                "no_warnings": False,
+                "verbose": True
             }
+            if browser_to_use:
+                base_opts["cookiesfrombrowser"] = (browser_to_use,)
+
 
             subs_opts = {}
             if dl_srt or dl_txt:
@@ -189,15 +244,14 @@ class YouTubeDownloader:
                 self._report_progress(status="Starting Video Download...")
                 video_opts = base_opts.copy()
                 video_opts.update({
-                    "format": "bestvideo+bestaudio/best",
+                    "format": "bv*+ba/b",
                     "merge_output_format": "mp4",
                     "writethumbnail": True,
                     "addmetadata": True,
                 })
                 video_opts.update(subs_opts)
-                
-                # Trimming (using native download_ranges if simple)
-                # Note: Trimming with library is complex, skipping for now to ensure base functionality
+                if trim_opts:
+                    video_opts.update(trim_opts)
                 
                 with yt_dlp.YoutubeDL(video_opts) as ydl:
                     ydl.download([url])
@@ -220,6 +274,8 @@ class YouTubeDownloader:
                     "writethumbnail": True,
                 })
                 audio_opts.update(subs_opts)
+                if trim_opts:
+                    audio_opts.update(trim_opts)
                 
                 with yt_dlp.YoutubeDL(audio_opts) as ydl:
                     ydl.download([url])
