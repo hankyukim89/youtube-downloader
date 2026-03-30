@@ -30,8 +30,8 @@ class ModernYouTubeDownloader(ctk.CTk):
         
         # Window setup
         self.title("YouTube Downloader")
-        self.geometry("480x520")
-        self.minsize(480, 520)
+        self.geometry("400x380")
+        self.minsize(360, 320)
         
         # Custom colors
         self.configure(fg_color=COLORS["bg_primary"])
@@ -73,6 +73,7 @@ class ModernYouTubeDownloader(ctk.CTk):
         self.txt_var = ctk.BooleanVar(value=self.config.dl_txt)
         self.lang_var = ctk.StringVar(value=self.config.subtitle_lang)
         self.audio_format_var = ctk.StringVar(value=self.config.audio_format)
+        self.video_res_var = ctk.StringVar(value="1080p")
         self.playlist_var = ctk.BooleanVar(value=self.config.download_playlist)
         self.trim_start_var = ctk.StringVar(value=self.config.trim_start)
         self.trim_end_var = ctk.StringVar(value=self.config.trim_end)
@@ -82,7 +83,6 @@ class ModernYouTubeDownloader(ctk.CTk):
         self.txt_var.trace_add("write", self._toggle_subtitle_options)
         self.video_var.trace_add("write", self._toggle_trim_options)
         self.playlist_var.trace_add("write", self._toggle_trim_options)
-        self.audio_var.trace_add("write", self._toggle_audio_format_options)
     
     def _build_ui(self):
         """Build the main UI"""
@@ -97,17 +97,11 @@ class ModernYouTubeDownloader(ctk.CTk):
         self.main_container = ctk.CTkFrame(self.scroll_frame, fg_color="transparent")
         self.main_container.pack(fill="both", expand=True, padx=SPACING["sm"])
         
-        # Header
-        self._build_header()
-        
         # URL Input Section
         self._build_url_section()
         
         # Download Options Section
         self._build_options_section()
-        
-        # Audio Format Section (hidden by default)
-        self._build_audio_format_section()
         
         # Playlist Section
         self._build_playlist_section()
@@ -127,49 +121,10 @@ class ModernYouTubeDownloader(ctk.CTk):
         # Initialize conditional UI states (must be after all UI is built)
         self._toggle_trim_options()
         self._toggle_subtitle_options()
-        self._toggle_audio_format_options()
-    
-    def _build_header(self):
-        """Build the header with title and icon"""
-        header_frame = ctk.CTkFrame(self.main_container, fg_color="transparent")
-        header_frame.pack(fill="x", pady=(0, SPACING["md"]))
-        
-        # Icon (YouTube-style play button)
-        icon_canvas = ctk.CTkCanvas(
-            header_frame, 
-            width=30, height=30, 
-            bg=COLORS["bg_primary"],
-            highlightthickness=0
-        )
-        icon_canvas.pack(side="left", padx=(0, SPACING["sm"]))
-        
-        # Draw play button icon
-        icon_canvas.create_oval(2, 2, 28, 28, fill=COLORS["accent_primary"], outline="")
-        icon_canvas.create_polygon(12, 8, 12, 22, 22, 15, fill="white")
-        
-        # Title and subtitle
-        title_frame = ctk.CTkFrame(header_frame, fg_color="transparent")
-        title_frame.pack(side="left", fill="both", expand=True)
-        
-        title_label = ctk.CTkLabel(
-            title_frame,
-            text="YouTube Downloader",
-            font=ctk.CTkFont(family="Helvetica Neue", size=20, weight="bold"),
-            text_color=COLORS["text_primary"]
-        )
-        title_label.pack(anchor="w")
-        
-        subtitle_label = ctk.CTkLabel(
-            title_frame,
-            text="Clean, modern downloader",
-            font=ctk.CTkFont(family="Helvetica Neue", size=12),
-            text_color=COLORS["text_secondary"]
-        )
-        subtitle_label.pack(anchor="w")
     
     def _build_url_section(self):
         """Build URL input section"""
-        section_frame = self._create_section("Paste URL", "YouTube video or playlist link")
+        section_frame = self._create_section("URL")
         
         # URL Entry with paste button
         url_container = ctk.CTkFrame(section_frame, fg_color="transparent")
@@ -189,7 +144,7 @@ class ModernYouTubeDownloader(ctk.CTk):
         
         paste_btn = ctk.CTkButton(
             url_container,
-            text="📋",
+            text="Paste",
             width=32,
             height=32,
             font=ctk.CTkFont(size=13),
@@ -202,39 +157,43 @@ class ModernYouTubeDownloader(ctk.CTk):
     
     def _build_options_section(self):
         """Build download options section"""
-        self.options_frame = self._create_section("Download Options", "Select what to download")
+        self.options_frame = self._create_section("Options")
         
         options_grid = ctk.CTkFrame(self.options_frame, fg_color="transparent")
         options_grid.pack(fill="x")
         
         # Video option
         self.video_check = self._create_option_card(
-            options_grid, "🎬", "Video", "High quality MP4", 
-            self.video_var, 0, 0
+            options_grid, "Video", 
+            self.video_var, 0, 0,
+            dropdown_var=self.video_res_var,
+            dropdown_options=["Best", "4K", "1080p", "720p", "480p", "360p"]
         )
         
         # Audio option
         self.audio_check = self._create_option_card(
-            options_grid, "🎵", "Audio", "MP3 format", 
-            self.audio_var, 0, 1
+            options_grid, "Audio", 
+            self.audio_var, 0, 1,
+            dropdown_var=self.audio_format_var,
+            dropdown_options=["mp3", "wav"]
         )
         
         # SRT option
         self.srt_check = self._create_option_card(
-            options_grid, "📝", "Subtitles", "SRT format", 
+            options_grid, "Subtitles", 
             self.srt_var, 1, 0
         )
         
         # TXT option
         self.txt_check = self._create_option_card(
-            options_grid, "📄", "Transcript", "Plain text", 
+            options_grid, "Transcript", 
             self.txt_var, 1, 1
         )
         
         options_grid.grid_columnconfigure(0, weight=1)
         options_grid.grid_columnconfigure(1, weight=1)
     
-    def _create_option_card(self, parent, icon, title, subtitle, variable, row, col):
+    def _create_option_card(self, parent, title, variable, row, col, dropdown_var=None, dropdown_options=None):
         """Create an option card with icon, title, subtitle, and checkbox"""
         card = ctk.CTkFrame(
             parent,
@@ -249,17 +208,7 @@ class ModernYouTubeDownloader(ctk.CTk):
         inner.pack(fill="both", expand=True, padx=SPACING["md"], pady=SPACING["sm"])
         
         # Icon and text
-        left_frame = ctk.CTkFrame(inner, fg_color="transparent")
-        left_frame.pack(side="left", fill="both", expand=True)
-        
-        icon_label = ctk.CTkLabel(
-            left_frame,
-            text=icon,
-            font=ctk.CTkFont(size=24)
-        )
-        icon_label.pack(side="left", padx=(0, SPACING["sm"]))
-        
-        text_frame = ctk.CTkFrame(left_frame, fg_color="transparent")
+        text_frame = ctk.CTkFrame(inner, fg_color="transparent")
         text_frame.pack(side="left")
         
         title_label = ctk.CTkLabel(
@@ -270,13 +219,22 @@ class ModernYouTubeDownloader(ctk.CTk):
         )
         title_label.pack(anchor="w")
         
-        sub_label = ctk.CTkLabel(
-            text_frame,
-            text=subtitle,
-            font=ctk.CTkFont(size=11),
-            text_color=COLORS["text_muted"]
-        )
-        sub_label.pack(anchor="w")
+        if dropdown_var and dropdown_options:
+            dropdown = ctk.CTkOptionMenu(
+                text_frame,
+                variable=dropdown_var,
+                values=dropdown_options,
+                width=80,
+                height=20,
+                font=ctk.CTkFont(size=11),
+                fg_color=COLORS["bg_tertiary"],
+                button_color=COLORS["bg_hover"],
+                button_hover_color=COLORS["accent_primary"],
+                dropdown_fg_color=COLORS["bg_secondary"],
+                dropdown_hover_color=COLORS["bg_hover"],
+                corner_radius=RADIUS["sm"]
+            )
+            dropdown.pack(anchor="w", pady=(4, 0))
         
         # Checkbox
         checkbox = ctk.CTkCheckBox(
@@ -298,7 +256,7 @@ class ModernYouTubeDownloader(ctk.CTk):
         def toggle_checkbox(event=None):
             variable.set(not variable.get())
         
-        for widget in [card, inner, left_frame, icon_label, text_frame, title_label, sub_label]:
+        for widget in [card, inner, text_frame, title_label]:
             widget.bind("<Button-1>", toggle_checkbox)
         
         return checkbox
@@ -317,14 +275,6 @@ class ModernYouTubeDownloader(ctk.CTk):
         inner = ctk.CTkFrame(self.playlist_frame, fg_color="transparent")
         inner.pack(fill="x", padx=SPACING["md"], pady=SPACING["md"])
         
-        # Icon and label
-        icon_label = ctk.CTkLabel(
-            inner,
-            text="📂",
-            font=ctk.CTkFont(size=20)
-        )
-        icon_label.pack(side="left", padx=(0, SPACING["sm"]))
-        
         text_frame = ctk.CTkFrame(inner, fg_color="transparent")
         text_frame.pack(side="left", fill="x", expand=True)
         
@@ -335,14 +285,6 @@ class ModernYouTubeDownloader(ctk.CTk):
             text_color=COLORS["accent_primary"]
         )
         title_label.pack(anchor="w")
-        
-        hint_label = ctk.CTkLabel(
-            text_frame,
-            text="Download all videos in the playlist",
-            font=ctk.CTkFont(size=11),
-            text_color=COLORS["text_muted"]
-        )
-        hint_label.pack(anchor="w")
         
         # Switch
         self.playlist_switch = ctk.CTkSwitch(
@@ -360,7 +302,7 @@ class ModernYouTubeDownloader(ctk.CTk):
     
     def _build_save_section(self):
         """Build save path section"""
-        section_frame = self._create_section("Save Location", "Where to save downloaded files")
+        section_frame = self._create_section("Save Location")
         
         path_container = ctk.CTkFrame(section_frame, fg_color="transparent")
         path_container.pack(fill="x")
@@ -389,10 +331,6 @@ class ModernYouTubeDownloader(ctk.CTk):
         )
         browse_btn.pack(side="right")
     
-    def _build_audio_format_section(self):
-        """Placeholder - only MP3 supported, no dropdown needed"""
-        self.audio_format_frame = ctk.CTkFrame(self.main_container, fg_color="transparent")
-        # Empty frame, never shown
     
     def _build_subtitle_section(self):
         """Build subtitle language selection (hidden by default)"""
@@ -408,7 +346,7 @@ class ModernYouTubeDownloader(ctk.CTk):
         
         label = ctk.CTkLabel(
             inner,
-            text="🌐  Subtitle Language",
+            text="Subtitle Language",
             font=ctk.CTkFont(size=14, weight="bold"),
             text_color=COLORS["text_primary"]
         )
@@ -446,7 +384,7 @@ class ModernYouTubeDownloader(ctk.CTk):
         
         header = ctk.CTkLabel(
             inner,
-            text="✂️  Trim Video (Optional)",
+            text="Trim Video",
             font=ctk.CTkFont(size=14, weight="bold"),
             text_color=COLORS["text_primary"]
         )
@@ -503,15 +441,6 @@ class ModernYouTubeDownloader(ctk.CTk):
         )
         self.trim_end_entry.pack(fill="x")
         
-        # Note
-        note_label = ctk.CTkLabel(
-            inner,
-            text="Format: HH:MM:SS or MM:SS • Disabled for playlists",
-            font=ctk.CTkFont(size=11),
-            text_color=COLORS["text_muted"]
-        )
-        note_label.pack(anchor="w", pady=(SPACING["sm"], 0))
-    
     def _build_action_section(self):
         """Build download button and progress section"""
         action_frame = ctk.CTkFrame(self.main_container, fg_color="transparent")
@@ -520,7 +449,7 @@ class ModernYouTubeDownloader(ctk.CTk):
         # Download button with gradient effect
         self.download_btn = ctk.CTkButton(
             action_frame,
-            text="⬇️  Download",
+            text="Download",
             height=42,
             font=ctk.CTkFont(size=16, weight="bold"),
             fg_color=COLORS["accent_primary"],
@@ -612,13 +541,7 @@ class ModernYouTubeDownloader(ctk.CTk):
         else:
             self.trim_frame.pack_forget()
     
-    def _toggle_audio_format_options(self, *args):
-        """Show/hide audio format dropdown"""
-        if self.audio_var.get():
-            self.audio_format_frame.pack(fill="x", pady=(SPACING["md"], 0), after=self.options_frame)
-        else:
-            self.audio_format_frame.pack_forget()
-    
+
     def _update_progress(self, progress: DownloadProgress):
         """Update UI with progress information"""
         def update():
@@ -684,7 +607,9 @@ class ModernYouTubeDownloader(ctk.CTk):
                     subtitle_lang=self.lang_var.get(),
                     download_playlist=self.playlist_var.get(),
                     trim_start=self.trim_start_var.get(),
-                    trim_end=self.trim_end_var.get()
+                    trim_end=self.trim_end_var.get(),
+                    video_res=self.video_res_var.get(),
+                    audio_format=self.audio_format_var.get()
                 )
             except ValueError as e:
                 self._update_progress(DownloadProgress(is_error=True, error_message=str(e)))

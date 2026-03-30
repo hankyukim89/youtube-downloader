@@ -182,7 +182,8 @@ class YouTubeDownloader:
 
     def download(self, url: str, save_path: str, dl_video: bool = True, dl_audio: bool = False,
                  dl_srt: bool = False, dl_txt: bool = False, subtitle_lang: str = "detect",
-                 download_playlist: bool = True, trim_start: str = "", trim_end: str = "") -> None:
+                 download_playlist: bool = True, trim_start: str = "", trim_end: str = "",
+                 video_res: str = "1080p", audio_format: str = "mp3") -> None:
         
         if not url or not save_path: raise ValueError("URL and save path required.")
         if not any([dl_video, dl_audio, dl_srt, dl_txt]): raise ValueError("Select at least one download type.")
@@ -239,12 +240,20 @@ class YouTubeDownloader:
             if dl_srt or dl_txt:
                 subs_opts = self._get_subtitle_opts(subtitle_lang)
 
-            # 1. Download Video
             if dl_video:
                 self._report_progress(status="Starting Video Download...")
                 video_opts = base_opts.copy()
+                
+                format_str = "bv*[ext=mp4]+ba[ext=m4a]/b[ext=mp4] / bv*+ba/b"
+                if video_res and video_res != "Best":
+                    if video_res == "4K":
+                        height = "2160"
+                    else:
+                        height = video_res.replace("p", "")
+                    format_str = f"bv*[ext=mp4][height<={height}]+ba[ext=m4a]/b[ext=mp4][height<={height}] / bv*[height<={height}]+ba/b"
+
                 video_opts.update({
-                    "format": "bv*+ba/b",
+                    "format": format_str,
                     "merge_output_format": "mp4",
                     "writethumbnail": True,
                     "addmetadata": True,
@@ -260,13 +269,19 @@ class YouTubeDownloader:
             if dl_audio:
                 self._report_progress(status="Starting Audio Download...")
                 audio_opts = base_opts.copy()
+                
+                audio_codec = audio_format.lower() if audio_format else "mp3"
+                pp_opts = {
+                    "key": "FFmpegExtractAudio",
+                    "preferredcodec": audio_codec,
+                }
+                if audio_codec == "mp3":
+                    pp_opts["preferredquality"] = "192"
+
                 audio_opts.update({
                     "format": "bestaudio/best",
-                    "postprocessors": [{
-                        "key": "FFmpegExtractAudio",
-                        "preferredcodec": "mp3",
-                        "preferredquality": "192",
-                    }, {
+                    "postprocessors": [
+                        pp_opts, {
                         'key': 'EmbedThumbnail',
                     }, {
                         'key': 'FFmpegMetadata',
@@ -279,8 +294,18 @@ class YouTubeDownloader:
                 
                 with yt_dlp.YoutubeDL(audio_opts) as ydl:
                     ydl.download([url])
+            # 3. Download Subtitles Only
+            if not dl_video and not dl_audio and (dl_srt or dl_txt):
+                self._report_progress(status="Downloading Subtitles/Transcript...")
+                sub_opts_only = base_opts.copy()
+                sub_opts_only.update({
+                    "skip_download": True,
+                })
+                sub_opts_only.update(subs_opts)
+                with yt_dlp.YoutubeDL(sub_opts_only) as ydl:
+                    ydl.download([url])
 
-            # 3. Post-processing
+            # 4. Post-processing
             if dl_audio and is_playlist:
                 self._tag_music_files(final_save_dir)
             if dl_txt:

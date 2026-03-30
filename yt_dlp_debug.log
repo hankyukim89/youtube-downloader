@@ -1,7 +1,7 @@
 YouTube Downloader Log Started. yt-dlp version: 2026.03.17
 DEBUG: [debug] Encodings: locale UTF-8, fs utf-8, pref UTF-8, out utf-8, error utf-8, screen utf-8
 DEBUG: [debug] yt-dlp version stable@2026.03.17 from yt-dlp/yt-dlp [04d6974f5] (pip) API
-DEBUG: [debug] params: {'paths': {'home': '/Users/kyu-macbookpro/Downloads/YT-Downloads'}, 'outtmpl': '%(title)s.%(ext)s', 'quiet': False, 'color': 'no_color', 'logger': <src.downloader.YouTubeDownloader.Logger object at 0x1010dee70>, 'progress_hooks': [<bound method YouTubeDownloader._progress_hook of <src.downloader.YouTubeDownloader object at 0x109140980>>], 'ignoreerrors': False, 'nocheckcertificate': True, 'noplaylist': False, 'no_warnings': False, 'verbose': True, 'format': 'bv*+ba/b', 'merge_output_format': 'mp4', 'writethumbnail': True, 'addmetadata': True, 'writesubtitles': True, 'writeautomaticsub': True, 'subtitlesformat': 'srt', 'js_runtimes': {'deno': {}}, 'remote_components': set(), 'compat_opts': set(), 'http_headers': {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-us,en;q=0.5', 'Sec-Fetch-Mode': 'navigate'}}
+DEBUG: [debug] params: {'paths': {'home': '/Users/kyu-macbookpro/Downloads/YT-Downloads'}, 'outtmpl': '%(title)s.%(ext)s', 'quiet': False, 'color': 'no_color', 'logger': <src.downloader.YouTubeDownloader.Logger object at 0x12406cbf0>, 'progress_hooks': [<bound method YouTubeDownloader._progress_hook of <src.downloader.YouTubeDownloader object at 0x12406d5b0>>], 'ignoreerrors': False, 'nocheckcertificate': True, 'noplaylist': True, 'no_warnings': False, 'verbose': True, 'skip_download': True, 'writesubtitles': True, 'writeautomaticsub': True, 'subtitlesformat': 'srt', 'js_runtimes': {'deno': {}}, 'remote_components': set(), 'compat_opts': set(), 'http_headers': {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-us,en;q=0.5', 'Sec-Fetch-Mode': 'navigate'}}
 DEBUG: [debug] Python 3.12.3 (CPython arm64 64bit) - macOS-26.4-arm64-arm-64bit (OpenSSL 3.0.13 30 Jan 2024)
 DEBUG: [debug] exe versions: ffmpeg 8.0.1 (setts), ffprobe 8.0.1
 DEBUG: [debug] Optional libraries: mutagen-1.47.0, sqlite3-3.45.1
@@ -14,532 +14,179 @@ DEBUG: [debug] [youtube] [pot] PO Token Providers: none
 DEBUG: [debug] [youtube] [pot] PO Token Cache Providers: memory
 DEBUG: [debug] [youtube] [pot] PO Token Cache Spec Providers: webpo
 DEBUG: [debug] [youtube] [jsc] JS Challenge Providers: bun (unavailable), deno, node (unavailable), quickjs (unavailable)
-DEBUG: [youtube] Extracting URL: https://www.youtube.com/watch?v=btjhh7NVpeM
-DEBUG: [youtube] btjhh7NVpeM: Downloading webpage
+DEBUG: [youtube] Extracting URL: https://www.youtube.com/watch?v=Ou2gJ-zinQo0
+DEBUG: [youtube] Ou2gJ-zinQo: Downloading webpage
 DEBUG: [debug] [youtube] Forcing "main" player JS variant for player f85ea353
         original url = /s/player/f85ea353/player_es6.vflset/en_US/base.js
-DEBUG: [youtube] btjhh7NVpeM: Downloading android vr player API JSON
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [youtube] btjhh7NVpeM: Downloading player f85ea353-main
+DEBUG: [youtube] Ou2gJ-zinQo: Downloading android vr player API JSON
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
+DEBUG: [youtube] Ou2gJ-zinQo: Downloading player f85ea353-main
 DEBUG: [youtube] [jsc:deno] Solving JS challenges using deno
 DEBUG: [debug] [youtube] [jsc:deno] Checking if npm packages are cached
 DEBUG: [debug] [youtube] [jsc:deno] Running deno: deno run --ext=js --no-code-cache --no-prompt --no-remote --no-lock --node-modules-dir=none --no-config --cached-only -
 WARNING: [youtube] [jsc] Remote components challenge solver script (deno) and NPM package (deno) were skipped. These may be required to solve JS challenges. You can enable these downloads with  --remote-components ejs:github  (recommended) or  --remote-components ejs:npm , respectively. For more information and alternatives, refer to  https://github.com/yt-dlp/yt-dlp/wiki/EJS
-WARNING: [youtube] btjhh7NVpeM: n challenge solving failed: Some formats may be missing. Ensure you have a supported JavaScript runtime and challenge solver script distribution installed. Review any warnings presented before this message. For more details, refer to  https://github.com/yt-dlp/yt-dlp/wiki/EJS
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [info] btjhh7NVpeM: Downloading subtitles: en
+WARNING: [youtube] Ou2gJ-zinQo: n challenge solving failed: Some formats may be missing. Ensure you have a supported JavaScript runtime and challenge solver script distribution installed. Review any warnings presented before this message. For more details, refer to  https://github.com/yt-dlp/yt-dlp/wiki/EJS
+DEBUG: [debug] [youtube] Ou2gJ-zinQo: Detected experiment to bind GVS PO Token to video ID for web_safari client
+DEBUG: [info] Ou2gJ-zinQo: Downloading subtitles: en
 DEBUG: [debug] Sort order given by extractor: quality, res, fps, hdr:12, source, vcodec, channels, acodec, lang, proto
 DEBUG: [debug] Formats sorted by: hasvid, ie_pref, quality, res, fps, hdr:12(7), source, vcodec, channels, acodec, lang, proto, size, br, asr, vext, aext, hasaud, id
-DEBUG: [info] btjhh7NVpeM: Downloading 1 format(s): 399+251
-DEBUG: [info] Writing video subtitles to: /Users/kyu-macbookpro/Downloads/YT-Downloads/Normal people are starting to go crazy.en.srt
-DEBUG: [debug] Invoking http downloader on "https://www.youtube.com/api/timedtext?v=btjhh7NVpeM&ei=M9XKabbIHOuosfIPnNOY6AY&caps=asr&opi=112496729&xoaf=5&xowf=1&xospf=1&hl=en&ip=0.0.0.0&ipbits=0&expire=1774925731&sparams=ip%2Cipbits%2Cexpire%2Cv%2Cei%2Ccaps%2Copi%2Cxoaf&signature=0ADD3FDD55E7E2F657BDB719ABA1FEEFD70F656C.C74C7DA65962E7346FB25482DF6373B889568BB2&key=yt8&kind=asr&lang=en&fmt=srt"
+DEBUG: [debug] Default format spec: bestvideo*+bestaudio/best
+DEBUG: [info] Ou2gJ-zinQo: Downloading 1 format(s): 399+251
+DEBUG: Deleting existing file /Users/kyu-macbookpro/Downloads/YT-Downloads/EVERYONE ON LINKEDIN IS CHATGPT! - ITS NOT THIS, ITS THAT!.en.srt
+DEBUG: [info] Writing video subtitles to: /Users/kyu-macbookpro/Downloads/YT-Downloads/EVERYONE ON LINKEDIN IS CHATGPT! - ITS NOT THIS, ITS THAT!.en.srt
+DEBUG: [debug] Invoking http downloader on "https://www.youtube.com/api/timedtext?v=Ou2gJ-zinQo&ei=CuPKad6eLICZsfIPloOa4AQ&caps=asr&opi=112496729&xoaf=4&xowf=1&xospf=1&hl=en&ip=0.0.0.0&ipbits=0&expire=1774929274&sparams=ip%2Cipbits%2Cexpire%2Cv%2Cei%2Ccaps%2Copi%2Cxoaf&signature=7F454BD9E0DD0C523FCC10F227149B6518808DD2.05118EF1D8E14293EFD280822AD589277E5A6F66&key=yt8&kind=asr&lang=en&fmt=srt"
 WARNING: The extractor specified to use impersonation for this download, but no impersonate target is available. If you encounter errors, then see  https://github.com/yt-dlp/yt-dlp#impersonation  for information on installing the required dependencies
-DEBUG: [download] Destination: /Users/kyu-macbookpro/Downloads/YT-Downloads/Normal people are starting to go crazy.en.srt
+DEBUG: [download] Destination: /Users/kyu-macbookpro/Downloads/YT-Downloads/EVERYONE ON LINKEDIN IS CHATGPT! - ITS NOT THIS, ITS THAT!.en.srt
 DEBUG: [download]    1.00KiB at  Unknown B/s (00:00:00)
-DEBUG: [download]    3.00KiB at  367.29KiB/s (00:00:00)
-DEBUG: [download]    7.00KiB at  778.72KiB/s (00:00:00)
-DEBUG: [download]   15.00KiB at    1.53MiB/s (00:00:00)
-DEBUG: [download]   15.36KiB at    1.45MiB/s (00:00:00)
-DEBUG: [download] 100% of   15.36KiB in 00:00:00 at 152.42KiB/s
-DEBUG: [info] Downloading video thumbnail 41 ...
-DEBUG: [info] Writing video thumbnail 41 to: /Users/kyu-macbookpro/Downloads/YT-Downloads/Normal people are starting to go crazy.webp
-DEBUG: [debug] Invoking http downloader on "https://rr2---sn-ni5f-t8gs.googlevideo.com/videoplayback?expire=1774922131&ei=M9XKabbIHOuosfIPnNOY6AY&ip=2604%3A3d08%3Ad17d%3A7f00%3Af57f%3Add9e%3Af19a%3Aadd3&id=o-AE4xqFWs2-DEbr9s-R37mVX2i9p8qa1zJz3duXf0KYUp&itag=399&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&cps=718&met=1774900531%2C&mh=tY&mm=31%2C26&mn=sn-ni5f-t8gs%2Csn-vgqskn6r&ms=au%2Conr&mv=m&mvi=2&pl=36&rms=au%2Cau&initcwndbps=3273750&bui=AUUZDGLZhy1vBT07f_9ERTPrKrv7k482_hVVM9gmlnovxiaa5vwsjsgvyzKRVxN1IygHBH_XfVlSK70t&spc=jlWavTB7uv0eZi23YhQcKNABPc2LWxBdvbJ2wWQTh0d5&vprv=1&svpuc=1&mime=video%2Fmp4&rqh=1&gir=yes&clen=56098602&dur=447.566&lmt=1774721801887589&mt=1774900170&fvip=3&keepalive=yes&fexp=51565115%2C51565681&c=ANDROID_VR&txp=443G534&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AHEqNM4wRQIhAMcgPb8Xl0vl64ZgBYtwpNIB-5RnrCoWqpS4FG1mvrRBAiAdemEiMCJ-YNXTHlbFVUFbuYnPQome6wymY0OscxShSQ%3D%3D&lsparams=cps%2Cmet%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Crms%2Cinitcwndbps&lsig=APaTxxMwRgIhAKCHhuJpvoq6GSBoGCTbdLJF1Gx-AzySD9q87TLNHHq4AiEA-RTWYKKeO7tXbMLBuimGKMs8uBB2cD4-1zGMUTpqXtk%3D"
-DEBUG: [download] Destination: /Users/kyu-macbookpro/Downloads/YT-Downloads/Normal people are starting to go crazy.f399.mp4
-DEBUG: [download]   0.0% of   53.50MiB at  Unknown B/s ETA Unknown
-DEBUG: [download]   0.0% of   53.50MiB at    1.87MiB/s ETA 00:28
-DEBUG: [download]   0.0% of   53.50MiB at    2.50MiB/s ETA 00:21
-DEBUG: [download]   0.0% of   53.50MiB at    3.35MiB/s ETA 00:15
-DEBUG: [download]   0.1% of   53.50MiB at    5.81MiB/s ETA 00:09
-DEBUG: [download]   0.1% of   53.50MiB at    3.91MiB/s ETA 00:13
-DEBUG: [download]   0.2% of   53.50MiB at    5.66MiB/s ETA 00:09
-DEBUG: [download]   0.5% of   53.50MiB at    7.06MiB/s ETA 00:07
-DEBUG: [download]   0.9% of   53.50MiB at    9.09MiB/s ETA 00:05
-DEBUG: [download]   1.9% of   53.50MiB at   13.81MiB/s ETA 00:03
-DEBUG: [download]   3.7% of   53.50MiB at   10.95MiB/s ETA 00:04
-DEBUG: [download]   7.5% of   53.50MiB at   17.50MiB/s ETA 00:02
-DEBUG: [download]  15.0% of   53.50MiB at   19.65MiB/s ETA 00:02
-DEBUG: [download]  18.6% of   53.50MiB at   22.40MiB/s ETA 00:01
-DEBUG: [download]  18.6% of   53.50MiB at  265.66KiB/s ETA 02:48
-DEBUG: [download]  18.6% of   53.50MiB at  550.84KiB/s ETA 01:21
-DEBUG: [download]  18.6% of   53.50MiB at    1.10MiB/s ETA 00:39
-DEBUG: [download]  18.6% of   53.50MiB at    2.15MiB/s ETA 00:20
-DEBUG: [download]  18.6% of   53.50MiB at    4.13MiB/s ETA 00:10
-DEBUG: [download]  18.7% of   53.50MiB at    4.17MiB/s ETA 00:10
-DEBUG: [download]  18.8% of   53.50MiB at    2.29MiB/s ETA 00:18
-DEBUG: [download]  19.0% of   53.50MiB at    3.64MiB/s ETA 00:11
-DEBUG: [download]  19.5% of   53.50MiB at    5.62MiB/s ETA 00:07
-DEBUG: [download]  20.4% of   53.50MiB at    9.11MiB/s ETA 00:04
-DEBUG: [download]  22.3% of   53.50MiB at    8.87MiB/s ETA 00:04
-DEBUG: [download]  26.0% of   53.50MiB at   12.30MiB/s ETA 00:03
-DEBUG: [download]  33.5% of   53.50MiB at   15.45MiB/s ETA 00:02
-DEBUG: [download]  36.7% of   53.50MiB at   16.18MiB/s ETA 00:02
-DEBUG: [download]  36.7% of   53.50MiB at  317.27KiB/s ETA 01:49
-DEBUG: [download]  36.7% of   53.50MiB at  717.06KiB/s ETA 00:48
-DEBUG: [download]  36.7% of   53.50MiB at    1.24MiB/s ETA 00:27
-DEBUG: [download]  36.7% of   53.50MiB at    2.33MiB/s ETA 00:14
-DEBUG: [download]  36.7% of   53.50MiB at    4.24MiB/s ETA 00:07
-DEBUG: [download]  36.8% of   53.50MiB at    3.15MiB/s ETA 00:10
-DEBUG: [download]  36.9% of   53.50MiB at    4.35MiB/s ETA 00:07
-DEBUG: [download]  37.1% of   53.50MiB at    5.66MiB/s ETA 00:05
-DEBUG: [download]  37.6% of   53.50MiB at    8.82MiB/s ETA 00:03
-DEBUG: [download]  38.5% of   53.50MiB at   13.54MiB/s ETA 00:02
-DEBUG: [download]  40.4% of   53.50MiB at   19.34MiB/s ETA 00:01
-DEBUG: [download]  44.2% of   53.50MiB at   27.78MiB/s ETA 00:01
-DEBUG: [download]  51.6% of   53.50MiB at   24.48MiB/s ETA 00:01
-DEBUG: [download]  55.0% of   53.50MiB at   26.47MiB/s ETA 00:00
-DEBUG: [download]  55.0% of   53.50MiB at  231.28KiB/s ETA 01:47
-DEBUG: [download]  55.0% of   53.50MiB at  147.04KiB/s ETA 02:47
-DEBUG: [download]  55.0% of   53.50MiB at  126.33KiB/s ETA 03:15
-DEBUG: [download]  55.1% of   53.50MiB at  250.59KiB/s ETA 01:38
-DEBUG: [download]  55.1% of   53.50MiB at  404.73KiB/s ETA 01:00
-DEBUG: [download]  55.1% of   53.50MiB at  775.32KiB/s ETA 00:31
-DEBUG: [download]  55.3% of   53.50MiB at    1.50MiB/s ETA 00:15
-DEBUG: [download]  55.5% of   53.50MiB at    2.90MiB/s ETA 00:08
-DEBUG: [download]  56.0% of   53.50MiB at    4.87MiB/s ETA 00:04
-DEBUG: [download]  56.9% of   53.50MiB at    7.72MiB/s ETA 00:02
-DEBUG: [download]  58.8% of   53.50MiB at   13.06MiB/s ETA 00:01
-DEBUG: [download]  62.5% of   53.50MiB at   21.17MiB/s ETA 00:00
-DEBUG: [download]  70.0% of   53.50MiB at   23.20MiB/s ETA 00:00
-DEBUG: [download]  72.8% of   53.50MiB at   22.16MiB/s ETA 00:00
-DEBUG: [download]  72.8% of   53.50MiB at  196.15KiB/s ETA 01:16
-DEBUG: [download]  72.8% of   53.50MiB at  488.85KiB/s ETA 00:30
-DEBUG: [download]  72.8% of   53.50MiB at  979.55KiB/s ETA 00:15
-DEBUG: [download]  72.9% of   53.50MiB at    1.82MiB/s ETA 00:07
-DEBUG: [download]  72.9% of   53.50MiB at    3.41MiB/s ETA 00:04
-DEBUG: [download]  72.9% of   53.50MiB at    2.56MiB/s ETA 00:05
-DEBUG: [download]  73.1% of   53.50MiB at    3.12MiB/s ETA 00:04
-DEBUG: [download]  73.3% of   53.50MiB at    4.67MiB/s ETA 00:03
-DEBUG: [download]  73.8% of   53.50MiB at    7.35MiB/s ETA 00:01
-DEBUG: [download]  74.7% of   53.50MiB at   11.56MiB/s ETA 00:01
-DEBUG: [download]  76.6% of   53.50MiB at   17.60MiB/s ETA 00:00
-DEBUG: [download]  80.3% of   53.50MiB at   20.29MiB/s ETA 00:00
-DEBUG: [download]  87.8% of   53.50MiB at   30.78MiB/s ETA 00:00
-DEBUG: [download]  90.9% of   53.50MiB at   34.10MiB/s ETA 00:00
-DEBUG: [download]  90.9% of   53.50MiB at  Unknown B/s ETA Unknown
-DEBUG: [download]  90.9% of   53.50MiB at    1.04MiB/s ETA 00:04
-DEBUG: [download]  90.9% of   53.50MiB at    1.42MiB/s ETA 00:03
-DEBUG: [download]  90.9% of   53.50MiB at    1.49MiB/s ETA 00:03
-DEBUG: [download]  90.9% of   53.50MiB at    2.76MiB/s ETA 00:01
-DEBUG: [download]  91.0% of   53.50MiB at    5.05MiB/s ETA 00:00
-DEBUG: [download]  91.1% of   53.50MiB at    5.81MiB/s ETA 00:00
-DEBUG: [download]  91.3% of   53.50MiB at    2.10MiB/s ETA 00:02
-DEBUG: [download]  91.8% of   53.50MiB at    3.03MiB/s ETA 00:01
-DEBUG: [download]  92.7% of   53.50MiB at    4.58MiB/s ETA 00:00
-DEBUG: [download]  94.6% of   53.50MiB at    6.09MiB/s ETA 00:00
-DEBUG: [download]  98.4% of   53.50MiB at    7.46MiB/s ETA 00:00
-DEBUG: [download] 100.0% of   53.50MiB at    6.97MiB/s ETA 00:00
-DEBUG: [download] 100% of   53.50MiB in 00:00:03 at 15.33MiB/s
-DEBUG: [debug] Invoking http downloader on "https://rr2---sn-ni5f-t8gs.googlevideo.com/videoplayback?expire=1774922131&ei=M9XKabbIHOuosfIPnNOY6AY&ip=2604%3A3d08%3Ad17d%3A7f00%3Af57f%3Add9e%3Af19a%3Aadd3&id=o-AE4xqFWs2-DEbr9s-R37mVX2i9p8qa1zJz3duXf0KYUp&itag=251&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&cps=718&met=1774900531%2C&mh=tY&mm=31%2C26&mn=sn-ni5f-t8gs%2Csn-vgqskn6r&ms=au%2Conr&mv=m&mvi=2&pl=36&rms=au%2Cau&initcwndbps=3273750&bui=AUUZDGLZhy1vBT07f_9ERTPrKrv7k482_hVVM9gmlnovxiaa5vwsjsgvyzKRVxN1IygHBH_XfVlSK70t&spc=jlWavTB7uv0eZi23YhQcKNABPc2LWxBdvbJ2wWQTh0d5&vprv=1&svpuc=1&xtags=acont%3Doriginal%3Alang%3Den-US&mime=audio%2Fwebm&rqh=1&gir=yes&clen=6953665&dur=447.601&lmt=1774730983862529&mt=1774900170&fvip=3&keepalive=yes&fexp=51565115%2C51565681&c=ANDROID_VR&txp=5532534&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cxtags%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AHEqNM4wRQIhANUdv6F4S9H7NsjFn9FZl9a7QcJbxDO7aHP1Ha9N3VRhAiAhtzzVdB_7ULATp5W_SR1Bied7rnG2mYRcxyNkB6ELSg%3D%3D&lsparams=cps%2Cmet%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Crms%2Cinitcwndbps&lsig=APaTxxMwRgIhAKCHhuJpvoq6GSBoGCTbdLJF1Gx-AzySD9q87TLNHHq4AiEA-RTWYKKeO7tXbMLBuimGKMs8uBB2cD4-1zGMUTpqXtk%3D"
-DEBUG: [download] Destination: /Users/kyu-macbookpro/Downloads/YT-Downloads/Normal people are starting to go crazy.f251.webm
-DEBUG: [download]   0.0% of    6.63MiB at  191.24KiB/s ETA 00:35
-DEBUG: [download]   0.0% of    6.63MiB at  472.28KiB/s ETA 00:14
-DEBUG: [download]   0.1% of    6.63MiB at  802.83KiB/s ETA 00:08
-DEBUG: [download]   0.2% of    6.63MiB at    1.45MiB/s ETA 00:04
-DEBUG: [download]   0.5% of    6.63MiB at    2.70MiB/s ETA 00:02
-DEBUG: [download]   0.9% of    6.63MiB at    3.35MiB/s ETA 00:01
-DEBUG: [download]   1.9% of    6.63MiB at    3.78MiB/s ETA 00:01
-DEBUG: [download]   3.8% of    6.63MiB at    4.32MiB/s ETA 00:01
-DEBUG: [download]   7.5% of    6.63MiB at    5.90MiB/s ETA 00:01
-DEBUG: [download]  15.1% of    6.63MiB at    6.74MiB/s ETA 00:00
-DEBUG: [download]  30.1% of    6.63MiB at    5.68MiB/s ETA 00:00
-DEBUG: [download]  60.3% of    6.63MiB at    7.57MiB/s ETA 00:00
-DEBUG: [download] 100.0% of    6.63MiB at    8.83MiB/s ETA 00:00
-DEBUG: [download] 100% of    6.63MiB in 00:00:00 at 7.50MiB/s
-DEBUG: [Merger] Merging formats into "/Users/kyu-macbookpro/Downloads/YT-Downloads/Normal people are starting to go crazy.mp4"
-DEBUG: [debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i 'file:/Users/kyu-macbookpro/Downloads/YT-Downloads/Normal people are starting to go crazy.f399.mp4' -i 'file:/Users/kyu-macbookpro/Downloads/YT-Downloads/Normal people are starting to go crazy.f251.webm' -c copy -map 0:v:0 -map 1:a:0 -movflags +faststart 'file:/Users/kyu-macbookpro/Downloads/YT-Downloads/Normal people are starting to go crazy.temp.mp4'
-DEBUG: Deleting original file /Users/kyu-macbookpro/Downloads/YT-Downloads/Normal people are starting to go crazy.f399.mp4 (pass -k to keep)
-DEBUG: Deleting original file /Users/kyu-macbookpro/Downloads/YT-Downloads/Normal people are starting to go crazy.f251.webm (pass -k to keep)
-DEBUG: [debug] Encodings: locale UTF-8, fs utf-8, pref UTF-8, out utf-8, error utf-8, screen utf-8
-DEBUG: [debug] yt-dlp version stable@2026.03.17 from yt-dlp/yt-dlp [04d6974f5] (pip) API
-DEBUG: [debug] params: {'paths': {'home': '/Users/kyu-macbookpro/Downloads/YT-Downloads'}, 'outtmpl': '%(title)s.%(ext)s', 'quiet': False, 'color': 'no_color', 'logger': <src.downloader.YouTubeDownloader.Logger object at 0x1010dee70>, 'progress_hooks': [<bound method YouTubeDownloader._progress_hook of <src.downloader.YouTubeDownloader object at 0x109140980>>], 'ignoreerrors': False, 'nocheckcertificate': True, 'noplaylist': False, 'no_warnings': False, 'verbose': True, 'format': 'bestaudio/best', 'postprocessors': [{'key': 'FFmpegExtractAudio', 'preferredcodec': 'mp3', 'preferredquality': '192'}, {'key': 'EmbedThumbnail'}, {'key': 'FFmpegMetadata'}], 'writethumbnail': True, 'writesubtitles': True, 'writeautomaticsub': True, 'subtitlesformat': 'srt', 'js_runtimes': {'deno': {}}, 'remote_components': set(), 'compat_opts': set(), 'http_headers': {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/142.0.0.0 Safari/537.36', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8', 'Accept-Language': 'en-us,en;q=0.5', 'Sec-Fetch-Mode': 'navigate'}}
-DEBUG: [debug] Python 3.12.3 (CPython arm64 64bit) - macOS-26.4-arm64-arm-64bit (OpenSSL 3.0.13 30 Jan 2024)
-DEBUG: [debug] exe versions: ffmpeg 8.0.1 (setts), ffprobe 8.0.1
-DEBUG: [debug] Optional libraries: mutagen-1.47.0, sqlite3-3.45.1
-DEBUG: [debug] JS runtimes: deno-2.6.6
-DEBUG: [debug] Proxy map: {}
-DEBUG: [debug] Request Handlers: urllib
-DEBUG: [debug] Plugin directories: none
-DEBUG: [debug] Loaded 1864 extractors
-DEBUG: [debug] [youtube] [pot] PO Token Providers: none
-DEBUG: [debug] [youtube] [pot] PO Token Cache Providers: memory
-DEBUG: [debug] [youtube] [pot] PO Token Cache Spec Providers: webpo
-DEBUG: [debug] [youtube] [jsc] JS Challenge Providers: bun (unavailable), deno, node (unavailable), quickjs (unavailable)
-DEBUG: [youtube] Extracting URL: https://www.youtube.com/watch?v=btjhh7NVpeM
-DEBUG: [youtube] btjhh7NVpeM: Downloading webpage
-DEBUG: [debug] [youtube] Forcing "main" player JS variant for player f85ea353
-        original url = /s/player/f85ea353/player_es6.vflset/en_US/base.js
-DEBUG: [youtube] btjhh7NVpeM: Downloading android vr player API JSON
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [debug] [youtube] btjhh7NVpeM: Some web_safari client https formats have been skipped as they are missing a URL. YouTube is forcing SABR streaming for this client. See  https://github.com/yt-dlp/yt-dlp/issues/12482  for more details
-DEBUG: [youtube] btjhh7NVpeM: Downloading player f85ea353-main
-DEBUG: [youtube] [jsc:deno] Solving JS challenges using deno
-DEBUG: [debug] [youtube] [jsc:deno] Checking if npm packages are cached
-DEBUG: [debug] [youtube] [jsc:deno] Running deno: deno run --ext=js --no-code-cache --no-prompt --no-remote --no-lock --node-modules-dir=none --no-config --cached-only -
-WARNING: [youtube] [jsc] Remote components challenge solver script (deno) and NPM package (deno) were skipped. These may be required to solve JS challenges. You can enable these downloads with  --remote-components ejs:github  (recommended) or  --remote-components ejs:npm , respectively. For more information and alternatives, refer to  https://github.com/yt-dlp/yt-dlp/wiki/EJS
-WARNING: [youtube] btjhh7NVpeM: n challenge solving failed: Some formats may be missing. Ensure you have a supported JavaScript runtime and challenge solver script distribution installed. Review any warnings presented before this message. For more details, refer to  https://github.com/yt-dlp/yt-dlp/wiki/EJS
-DEBUG: [debug] [youtube] btjhh7NVpeM: Detected experiment to bind GVS PO Token to video ID for web_safari client
-DEBUG: [info] btjhh7NVpeM: Downloading subtitles: en
-DEBUG: [debug] Sort order given by extractor: quality, res, fps, hdr:12, source, vcodec, channels, acodec, lang, proto
-DEBUG: [debug] Formats sorted by: hasvid, ie_pref, quality, res, fps, hdr:12(7), source, vcodec, channels, acodec, lang, proto, size, br, asr, vext, aext, hasaud, id
-DEBUG: [info] btjhh7NVpeM: Downloading 1 format(s): 251
-DEBUG: Deleting existing file /Users/kyu-macbookpro/Downloads/YT-Downloads/Normal people are starting to go crazy.en.srt
-DEBUG: [info] Writing video subtitles to: /Users/kyu-macbookpro/Downloads/YT-Downloads/Normal people are starting to go crazy.en.srt
-DEBUG: [debug] Invoking http downloader on "https://www.youtube.com/api/timedtext?v=btjhh7NVpeM&ei=OtXKaZiFGcygsfIPwrzdqQY&caps=asr&opi=112496729&xoaf=5&xowf=1&xospf=1&hl=en&ip=0.0.0.0&ipbits=0&expire=1774925738&sparams=ip%2Cipbits%2Cexpire%2Cv%2Cei%2Ccaps%2Copi%2Cxoaf&signature=04E51DCB0C7C4D6BC336543EB8E4407AA507958F.18A93A5C9ADFA475213D538E181A883DA383D1A1&key=yt8&kind=asr&lang=en&fmt=srt"
-WARNING: The extractor specified to use impersonation for this download, but no impersonate target is available. If you encounter errors, then see  https://github.com/yt-dlp/yt-dlp#impersonation  for information on installing the required dependencies
-DEBUG: [download] Destination: /Users/kyu-macbookpro/Downloads/YT-Downloads/Normal people are starting to go crazy.en.srt
-DEBUG: [download]    1.00KiB at  Unknown B/s (00:00:00)
-DEBUG: [download]    3.00KiB at    1.73MiB/s (00:00:00)
-DEBUG: [download]    7.00KiB at    2.25MiB/s (00:00:00)
-DEBUG: [download]   15.00KiB at    1.28MiB/s (00:00:00)
-DEBUG: [download]   15.36KiB at  785.15KiB/s (00:00:00)
-DEBUG: [download] 100% of   15.36KiB in 00:00:00 at 86.46KiB/s
-DEBUG: Deleting existing file /Users/kyu-macbookpro/Downloads/YT-Downloads/Normal people are starting to go crazy.webp
-DEBUG: [info] Downloading video thumbnail 41 ...
-DEBUG: [info] Writing video thumbnail 41 to: /Users/kyu-macbookpro/Downloads/YT-Downloads/Normal people are starting to go crazy.webp
-DEBUG: [debug] Invoking http downloader on "https://rr2---sn-ni5f-t8gs.googlevideo.com/videoplayback?expire=1774922138&ei=OtXKaZiFGcygsfIPwrzdqQY&ip=2604%3A3d08%3Ad17d%3A7f00%3A70f0%3Ac34b%3A327c%3Adbd5&id=o-ANoe1i6_7jXBraTiwwfRm9Ezii9xB7JghhPH2fnVabnt&itag=251&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&cps=724&met=1774900538%2C&mh=tY&mm=31%2C26&mn=sn-ni5f-t8gs%2Csn-vgqskn6r&ms=au%2Conr&mv=m&mvi=2&pl=36&rms=au%2Cau&initcwndbps=3273750&bui=AUUZDGIvfckCkO410ykxUIOOVqrTcyVdTgF4LPYaGcIWupBuaOeje-eGrxG3Pyu0xRReX5-wMfXAgRak&spc=jlWavX0twQnQ0bOxM4aqJscCdfvcWBkJqCYtd67PSLWQ&vprv=1&svpuc=1&xtags=acont%3Doriginal%3Alang%3Den-US&mime=audio%2Fwebm&rqh=1&gir=yes&clen=6953665&dur=447.601&lmt=1774730983862529&mt=1774900170&fvip=3&keepalive=yes&fexp=51565115%2C51565681&c=ANDROID_VR&txp=5532534&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cxtags%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AHEqNM4wRAIgc_OVwIDd1vFPJ5vimaa3UbPsjYKABjhmYgcfQOYp-XECIDfhA77I4bFT3Mq8oVkxvcyj43XpjcMGdEldlioo0IAd&lsparams=cps%2Cmet%2Cmh%2Cmm%2Cmn%2Cms%2Cmv%2Cmvi%2Cpl%2Crms%2Cinitcwndbps&lsig=APaTxxMwRQIgAYiDembORG3vmGdU4ERxoSQuKh2O3qouRyP4Ya8daM0CIQD1xFJ6KzjKTcXSdpz4z2UKcFH6AHyzR7DDbnem-uHOKA%3D%3D"
-DEBUG: [download] Destination: /Users/kyu-macbookpro/Downloads/YT-Downloads/Normal people are starting to go crazy.webm
-DEBUG: [download]   0.0% of    6.63MiB at  276.47KiB/s ETA 00:24
-DEBUG: [download]   0.0% of    6.63MiB at   90.61KiB/s ETA 01:14
-DEBUG: [download]   0.1% of    6.63MiB at  196.06KiB/s ETA 00:34
-DEBUG: [download]   0.2% of    6.63MiB at  238.80KiB/s ETA 00:28
-DEBUG: [download]   0.5% of    6.63MiB at  470.40KiB/s ETA 00:14
-DEBUG: [download]   0.9% of    6.63MiB at  929.27KiB/s ETA 00:07
-DEBUG: [download]   1.9% of    6.63MiB at    1.28MiB/s ETA 00:05
-DEBUG: [download]   3.8% of    6.63MiB at    1.95MiB/s ETA 00:03
-DEBUG: [download]   7.5% of    6.63MiB at    3.13MiB/s ETA 00:01
-DEBUG: [download]  15.1% of    6.63MiB at    5.11MiB/s ETA 00:01
-DEBUG: [download]  30.1% of    6.63MiB at    8.70MiB/s ETA 00:00
-DEBUG: [download]  60.3% of    6.63MiB at   14.92MiB/s ETA 00:00
-DEBUG: [download] 100.0% of    6.63MiB at   21.04MiB/s ETA 00:00
-DEBUG: [download] 100% of    6.63MiB in 00:00:00 at 17.53MiB/s
-DEBUG: [debug] ffmpeg command line: ffprobe -show_streams 'file:/Users/kyu-macbookpro/Downloads/YT-Downloads/Normal people are starting to go crazy.webm'
-DEBUG: [ExtractAudio] Destination: /Users/kyu-macbookpro/Downloads/YT-Downloads/Normal people are starting to go crazy.mp3
-DEBUG: [debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i 'file:/Users/kyu-macbookpro/Downloads/YT-Downloads/Normal people are starting to go crazy.webm' -vn -acodec libmp3lame -b:a 192.0k -movflags +faststart 'file:/Users/kyu-macbookpro/Downloads/YT-Downloads/Normal people are starting to go crazy.mp3'
-DEBUG: Deleting original file /Users/kyu-macbookpro/Downloads/YT-Downloads/Normal people are starting to go crazy.webm (pass -k to keep)
-DEBUG: [ThumbnailsConvertor] Converting thumbnail "/Users/kyu-macbookpro/Downloads/YT-Downloads/Normal people are starting to go crazy.webp" to png
-DEBUG: [debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -f image2 -pattern_type none -i 'file:/Users/kyu-macbookpro/Downloads/YT-Downloads/Normal people are starting to go crazy.webp' -update 1 -movflags +faststart 'file:/Users/kyu-macbookpro/Downloads/YT-Downloads/Normal people are starting to go crazy.png'
-DEBUG: [EmbedThumbnail] ffmpeg: Adding thumbnail to "/Users/kyu-macbookpro/Downloads/YT-Downloads/Normal people are starting to go crazy.mp3"
-DEBUG: [debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i 'file:/Users/kyu-macbookpro/Downloads/YT-Downloads/Normal people are starting to go crazy.mp3' -i 'file:/Users/kyu-macbookpro/Downloads/YT-Downloads/Normal people are starting to go crazy.png' -c copy -map 0:0 -map 1:0 -write_id3v1 1 -id3v2_version 3 -metadata:s:v 'title=Album cover' -metadata:s:v 'comment=Cover (front)' -movflags +faststart 'file:/Users/kyu-macbookpro/Downloads/YT-Downloads/Normal people are starting to go crazy.temp.mp3'
-DEBUG: [Metadata] Adding metadata to "/Users/kyu-macbookpro/Downloads/YT-Downloads/Normal people are starting to go crazy.mp3"
-DEBUG: [debug] ffmpeg command line: ffmpeg -y -loglevel repeat+info -i 'file:/Users/kyu-macbookpro/Downloads/YT-Downloads/Normal people are starting to go crazy.mp3' -map 0 -dn -ignore_unknown -c copy -write_id3v1 1 -metadata 'title=Normal people are starting to go crazy' -metadata date=20260327 -metadata 'description=You'"'"'re absolutely right, you ARE a prophet!
-
-My sincere thanks to Fish for sponsoring this video. Fish is an open-source, open-weights synthetic voice tool that is "the most expressive, emotionally controllable real-time voice model."
-
-Use this link and enter discount code Mo20 to get started: 
-https://fish.audio/?fpr=mo62
-
-(This is a non-affiliate link, and I make no commission. It'"'"'s used only to track that you came from this video 🙂)
-
----
-
-https://x.com/atmoio
-https://atmoio.substack.com
-
-Sources:
-
-https://futurism.com/future-society/openai-data-chatgpt-mental-health-crises
-https://www.wired.com/story/chatgpt-psychosis-and-self-harm-update/
-https://x.com/EricRWeinstein/status/2036156032003744198
-
----
-
-LLMs were used on a very short leash to assist in the production of this video to: generate b-roll images and deep research. Narrative beginning, middle, and end, as well as color, analysis, conclusion, and most importantly the comic relief, are always written by me. Occasionally, I might keep elements from the LLM that I thought were useful to advance the narrative structure. It'"'"'s important to note that I am not anti-AI, but rather anti being-stupid-with-AI (and stupidity abounds, which is what creates the opportunity to make these videos). One would be quite mistaken to treat this technology as completely useless. My consistent take on this channel has been that AI is supremely useful, but is not a tool that can automate or replace humans. It must be kept on a very tight leash. This limitation is not temporary, but rather inherit to LLMs. AGI would solve these problems, but is not something I'"'"'m wholly convinced is possible.' -metadata 'synopsis=You'"'"'re absolutely right, you ARE a prophet!
-
-My sincere thanks to Fish for sponsoring this video. Fish is an open-source, open-weights synthetic voice tool that is "the most expressive, emotionally controllable real-time voice model."
-
-Use this link and enter discount code Mo20 to get started: 
-https://fish.audio/?fpr=mo62
-
-(This is a non-affiliate link, and I make no commission. It'"'"'s used only to track that you came from this video 🙂)
-
----
-
-https://x.com/atmoio
-https://atmoio.substack.com
-
-Sources:
-
-https://futurism.com/future-society/openai-data-chatgpt-mental-health-crises
-https://www.wired.com/story/chatgpt-psychosis-and-self-harm-update/
-https://x.com/EricRWeinstein/status/2036156032003744198
-
----
-
-LLMs were used on a very short leash to assist in the production of this video to: generate b-roll images and deep research. Narrative beginning, middle, and end, as well as color, analysis, conclusion, and most importantly the comic relief, are always written by me. Occasionally, I might keep elements from the LLM that I thought were useful to advance the narrative structure. It'"'"'s important to note that I am not anti-AI, but rather anti being-stupid-with-AI (and stupidity abounds, which is what creates the opportunity to make these videos). One would be quite mistaken to treat this technology as completely useless. My consistent take on this channel has been that AI is supremely useful, but is not a tool that can automate or replace humans. It must be kept on a very tight leash. This limitation is not temporary, but rather inherit to LLMs. AGI would solve these problems, but is not something I'"'"'m wholly convinced is possible.' -metadata 'purl=https://www.youtube.com/watch?v=btjhh7NVpeM' -metadata 'comment=https://www.youtube.com/watch?v=btjhh7NVpeM' -metadata 'artist=Mo Bitar' -metadata 'genre=Science & Technology' -metadata:s:0 language=eng -movflags +faststart 'file:/Users/kyu-macbookpro/Downloads/YT-Downloads/Normal people are starting to go crazy.temp.mp3'
+DEBUG: [download]    3.00KiB at    2.38MiB/s (00:00:00)
+DEBUG: [download]    7.00KiB at    3.11MiB/s (00:00:00)
+DEBUG: [download]   15.00KiB at    2.35MiB/s (00:00:00)
+DEBUG: [download]   18.06KiB at    1.04MiB/s (00:00:00)
+DEBUG: [download] 100% of   18.06KiB in 00:00:00 at 166.09KiB/s
